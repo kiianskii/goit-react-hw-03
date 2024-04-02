@@ -1,8 +1,9 @@
-
+import s from "./SearchBox.module.css"
 
 function SearchBox ({ searchStr, setSearch }) {
 	return (
-		<div>
+        <div className={s.wrapper}>
+            <h2>Find contacts by name</h2>
 			<input
 				value={searchStr}
 				onChange={e => setSearch(e.target.value)}
@@ -11,7 +12,7 @@ function SearchBox ({ searchStr, setSearch }) {
 				placeholder='Enter name...'
 			/>
 			{searchStr && (
-				<button className='btn border' onClick={() => setSearch('')}>
+				<button className={s.btn} onClick={() => setSearch('')}>
 					Reset
 				</button>
 			)}
