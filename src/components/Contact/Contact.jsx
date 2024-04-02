@@ -1,11 +1,11 @@
 
 
-function Contact({contact}) {
+function Contact({contact, handleDelete}) {
   return (
       <li>
           <h3>Name: {contact.name}</h3> 
           <p>Tel: {contact.number}</p> 
-          <button>Delete</button>
+         <button onClick={() => handleDelete(contact.id)}>Delete</button>
     </li>
   )
 }
